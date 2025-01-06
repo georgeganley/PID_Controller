@@ -73,8 +73,20 @@ $$\alpha = \tau_p \times \text{error}
 
 2. **Roll Control**:  
    - Error = (desired horizontal position) – (current horizontal position)  
-   - Adjust roll angle to tilt the drone left or right to move horizontally.  
+   - Adjust roll angle to tilt the drone left or right to move horizontally.
    - The integral term helps correct steady-state errors over time.  
    - The derivative term stabilizes and prevents oscillations in horizontal movement.
+
+## Results
+
+The visuals below illustrate the impact of a successfully implemented PID controller.
+
+In the first example, below, the drone reaches and maintains a target height using the thrust PID controller, not needing to adjust for roll.
+
+![Test_1](https://github.com/user-attachments/assets/9842342b-dc5a-400c-9208-c7678c0abc77)
+
+In the second example, the drone reaches its target height, but is also impacted by an additional downward force. Simultaneously, the thrust PID must compensate for incremental loss in RPM over time, implementing an error in the drone for which the integral error must compensate.
+
+![Test_2](https://github.com/user-attachments/assets/eb2387bf-ab31-4d21-a01a-0a5a61b38ad4)
 
 
